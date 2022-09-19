@@ -6,8 +6,7 @@ import 'package:provider/provider.dart';
 
 class CourseCard extends StatelessWidget {
   final Entry? entry;
-  final Entries? enter;
-  const CourseCard({Key? key, this.entry, this.enter}) : super(key: key);
+  const CourseCard({Key? key, this.entry,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +67,7 @@ class CourseCard extends StatelessWidget {
                     ),
                     IconButton(
                         onPressed: () {
-                          value.removeFromCart(enter);
+                          value.removeFromCart(entry);
                         },
                         icon: const Icon(
                           Icons.delete,
