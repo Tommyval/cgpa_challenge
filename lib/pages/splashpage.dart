@@ -1,4 +1,4 @@
-import 'package:cgpa_challenge/pages/score_page.dart';
+import 'package:cgpa_challenge/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
 import '../Utils/Utils.dart';
@@ -10,7 +10,7 @@ class StartApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 10), () {
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const ScorePage()));
+          .push(MaterialPageRoute(builder: (context) => const HomePage()));
     });
     return Scaffold(
         backgroundColor: Utils.maintheme,
