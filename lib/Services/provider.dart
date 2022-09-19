@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class Entries with ChangeNotifier {
   final List<Entry> items = [];
-
+  int deletecont = 0;
+  Entry deletecourse = Entry(credit: '', unit: 0, grade: '');
   List<Entry> get itemlist {
     return [...items];
   }
@@ -32,8 +33,11 @@ class Entries with ChangeNotifier {
     notifyListeners();
   }
 
-  void removeFromCard(Entry entries) {
-    items.removeWhere((d) => d.title == entries.title);
+  void removeFromCart(Entry entry) {
+    deletecont = items.indexWhere((element) => element.credit == entry.credit);
+    deletecourse = items[deletecont];
+    items.removeAt(deletecont);
+    notifyListeners();
   }
 
   void clearCart() {
