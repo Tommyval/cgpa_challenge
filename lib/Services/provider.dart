@@ -34,6 +34,7 @@ class Entries with ChangeNotifier {
 
   void removeFromCard(Entry entries) {
     items.removeWhere((d) => d.title == entries.title);
+    notifyListeners();
   }
 
   void clearCart() {
