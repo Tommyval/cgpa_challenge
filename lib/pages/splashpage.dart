@@ -1,4 +1,4 @@
-import 'package:cgpa_challenge/pages/homepage.dart';
+import 'package:cgpa_challenge/auth/Linkpage.dart';
 import 'package:flutter/material.dart';
 
 import '../Utils/Utils.dart';
@@ -10,7 +10,7 @@ class StartApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 10), () {
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => const HomePage()));
+          .push(MaterialPageRoute(builder: (context) => const LinkedPage()));
     });
     return Scaffold(
         backgroundColor: Utils.maintheme,
@@ -22,13 +22,13 @@ class StartApp extends StatelessWidget {
                 'UCP',
                 style: TextStyle(
                     fontSize: 24,
-                    color: Color(0xff23693D),
+                    color: Utils.textColor,
                     fontWeight: FontWeight.bold),
               ),
             ),
             Center(
                 child: Text(
-              'GPA \$ CGPA',
+              'GPA & CGPA',
               style: TextStyle(fontWeight: FontWeight.w500),
             )),
             SizedBox(
@@ -40,7 +40,7 @@ class StartApp extends StatelessWidget {
                 width: 40,
                 child: CircularProgressIndicator(
                   strokeWidth: 6,
-                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xff23693D)),
+                  valueColor: AlwaysStoppedAnimation<Color>(Utils.textColor),
                 ),
               ),
             )

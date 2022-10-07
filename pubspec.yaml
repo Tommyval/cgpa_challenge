@@ -36,7 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   provider:
   flutter_neumorphic: ^3.2.0
-
+  cloud_firestore: ^3.4.9
+  firebase_auth: ^3.10.0
+  shared_preferences: ^2.0.15
 dev_dependencies:
   flutter_test:
     sdk: flutter

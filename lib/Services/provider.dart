@@ -5,6 +5,7 @@ class Entries with ChangeNotifier {
   final List<Entry> items = [];
   int deletecon = 0;
   Entry deletecourse = Entry(credit: '', unit: 0, grade: '');
+
   List<Entry> get itemlist {
     return [...items];
   }
@@ -33,8 +34,8 @@ class Entries with ChangeNotifier {
     notifyListeners();
   }
 
-  void removeFromCart(Entry entry) {
-    deletecon = items.indexWhere((element) => element.credit == entry.credit);
+  void removeFromCart(Entry entries) {
+    deletecon = items.indexWhere((element) => element.credit == entries.credit);
     deletecourse = items[deletecon];
     items.removeAt(deletecon);
     notifyListeners();

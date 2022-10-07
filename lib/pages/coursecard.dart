@@ -6,8 +6,10 @@ import 'package:provider/provider.dart';
 
 class CourseCard extends StatelessWidget {
   final Entry? entry;
-  final Entries? enter;
-  const CourseCard({Key? key, this.entry, this.enter}) : super(key: key);
+  const CourseCard({
+    Key? key,
+    this.entry,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,71 +17,66 @@ class CourseCard extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: Consumer<Entries>(
         builder: (context, value, child) {
-          return GestureDetector(
-            onTap: () {
-              value.removeFromCart(entry!);
-            },
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.white),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          'SUBJECT:',
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Utils.textColor),
-                        ),
+          return Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20), color: Colors.white),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'SUBJECT:',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Utils.textColor),
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        entry!.title!,
-                        style: const TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  Text(entry!.credit!),
-                  Row(
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          'Grade And Unit:',
-                          style: TextStyle(
-                              color: Utils.textColor,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Text(
-                        '${entry!.grade!} (${entry!.gpa})',
-                        style: const TextStyle(
-                            color: Colors.black,
+                    ),
+                    Text(
+                      entry!.title!,
+                      style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Utils.altColor),
+                    ),
+                  ],
+                ),
+                Text(entry!.credit!),
+                Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'Grade And Unit:',
+                        style: TextStyle(
+                            color: Utils.textColor,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
-                      const SizedBox(
-                        width: 130,
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.delete,
-                            color: Colors.grey,
-                          ))
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                    Text(
+                      '${entry!.grade!} (${entry!.gpa})',
+                      style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      width: 100,
+                    ),
+                    IconButton(
+                        onPressed: () {
+                          value.removeFromCart(entry!);
+                        },
+                        icon: const Icon(
+                          Icons.delete,
+                          color: Colors.grey,
+                        ))
+                  ],
+                ),
+              ],
             ),
           );
         },
