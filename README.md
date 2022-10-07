@@ -1,5 +1,5 @@
 Introduction 
-CGPA Calculator is mainly aimed at enabling BITS’ians to 
+CGPA Calculator is mainly aimed at enabling students to 
 calculate their grades achieved in different 
 semesters with the feature of calculating their GPA.
  
