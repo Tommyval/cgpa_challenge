@@ -1,16 +1,11 @@
-# cgpa_challenge
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Introduction 
+CGPA Calculator is mainly aimed at enabling students to 
+calculate their grades achieved in different 
+semesters with the feature of calculating their GPA.
+ 
+ 
+The calculation is automatic and without any hassle. Just add 
+the course you are pursuing in a semester, the course title, 
+Add credits of that course and your grade achieved to add that course for the semester to 
+calculate your gpa. You can plug and play with the courses anytime you want. 
+CGPA Calculator App is developed using Flutter. Authentication is performed using Firebase.
