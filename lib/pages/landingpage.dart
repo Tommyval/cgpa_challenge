@@ -2,6 +2,7 @@ import 'package:cgpa_challenge/Services/provider.dart';
 import 'package:cgpa_challenge/Services/theme_service.dart';
 import 'package:cgpa_challenge/Utils/Utils.dart';
 import 'package:cgpa_challenge/pages/addpage.dart';
+import 'package:cgpa_challenge/widgets/bottombar.dart';
 import 'package:cgpa_challenge/widgets/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -135,17 +136,3 @@ class _BottomBarState extends State<BottomBar> {
     );
   }
 }
-
-class BottomBarItem {
-  String? label;
-  bool? isSelected;
-  IconData? icon;
-
-  BottomBarItem({this.label, this.isSelected, this.icon});
-}
-
-final List<BottomBarItem> barItemsList = [
-  BottomBarItem(label: 'GPA', isSelected: true, icon: Icons.book),
-  BottomBarItem(label: 'CGPA', isSelected: false, icon: Icons.book),
-  BottomBarItem(label: 'Review', isSelected: false, icon: Icons.pending),
-];
