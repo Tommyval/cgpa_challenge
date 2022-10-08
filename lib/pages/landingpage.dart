@@ -57,11 +57,9 @@ class _LandingPageState extends State<LandingPage> {
                   },
                 ),
                 IconButton(
-                    onPressed: value.items.isEmpty
-                        ? null
-                        : () {
-                            value.clearCart();
-                          },
+                    onPressed: () {
+                      value.clearCart();
+                    },
                     icon: const Icon(
                       Icons.restart_alt,
                       color: Colors.grey,

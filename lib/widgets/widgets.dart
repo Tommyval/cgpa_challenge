@@ -7,7 +7,7 @@ class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    var gpaProvider = context.read<Entries>();
+    var gpaProvider = context.watch<Entries>();
     var items = gpaProvider.itemlist;
     return ListView.builder(
       shrinkWrap: true,
